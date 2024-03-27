@@ -319,7 +319,7 @@
       this.assert(this.gSystem.getCoreSystem(outval));
       this.gSystemCore = outval.val;
 
-      this.assert(this.gSystemCore.setDSPBufferSize(2048, 2));
+      this.assert(this.gSystemCore.setDSPBufferSize(4096, 1));
       this.assert(
         this.gSystemCore.getDriverInfo(0, null, null, outval, null, null)
       );
@@ -333,11 +333,11 @@
 
       this.assert(
         this.gSystem.setAdvancedSettings({
-          commandqueuesize: 32768,
-          handleinitialsize: 8192,
-          studioupdateperiod: 5,
-          idlesampledatapoolsize: 262144,
-          streamingscheduledelay: 8192,
+          commandqueuesize: 0,
+          handleinitialsize: 0,
+          studioupdateperiod: 40,
+          idlesampledatapoolsize: 0,
+          streamingscheduledelay: 0,
         })
       );
 
