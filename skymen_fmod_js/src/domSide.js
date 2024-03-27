@@ -333,11 +333,11 @@
 
       this.assert(
         this.gSystem.setAdvancedSettings({
-          commandqueuesize: 0,
-          handleinitialsize: 0,
+          commandqueuesize: 32768,
+          handleinitialsize: 8192,
           studioupdateperiod: 5,
-          idlesampledatapoolsize: 0,
-          streamingscheduledelay: 0,
+          idlesampledatapoolsize: 262144,
+          streamingscheduledelay: 8192,
         })
       );
 
